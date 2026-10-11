@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff4f7">
+  <meta name="description" content="A little love story, made just for you.">
+  <title>A Little Something for You</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="ambient" aria-hidden="true"><span>♡</span><span>✿</span><span>♡</span><span>✦</span><span>♡</span><span>✿</span></div>
+  <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+  <main>
+    <section class="screen active" id="welcome" aria-labelledby="welcome-title">
+      <div class="eyebrow"><span class="sparkle">✦</span> A tiny surprise for my favorite person <span class="sparkle">✦</span></div>
+      <div class="dog-wrap" aria-label="A cute animated puppy holding a heart" role="img">
+        <div class="dog-heart">♡</div><div class="dog-ear ear-left"></div><div class="dog-ear ear-right"></div>
+        <div class="dog"><div class="dog-face"><i class="eye eye-left"></i><i class="eye eye-right"></i><i class="cheek cheek-left"></i><i class="cheek cheek-right"></i><i class="muzzle"></i><i class="nose"></i><i class="mouth"></i></div></div>
+        <div class="dog-paw paw-left"></div><div class="dog-paw paw-right"></div>
+      </div>
+      <h1 id="welcome-title">Hey, babe…<br><span>wanna see something I made for you?</span></h1>
+      <p class="subtext">I put a little piece of my heart into it. 🥺</p>
+      <div class="button-row">
+        <button class="button button-primary" id="showIt">Yes, show me! <span>♡</span></button>
+        <button class="button button-soft" id="notYet">Not yet</button>
+      </div>
+      <p class="tiny-note">(The puppy is politely asking…)</p>
+    </section>
+
+    <section class="screen" id="nudge" aria-labelledby="nudge-title" hidden>
+      <div class="mini-heart" aria-hidden="true">💗</div>
+      <p class="eyebrow">A very important puppy request</p>
+      <h2 id="nudge-title">Babe, please press yes? 🥺</h2>
+      <p class="subtext">I promise there’s something sweet waiting for you.</p>
+      <div class="button-row"><button class="button button-primary" id="okayYes">Okay, yes! <span>♡</span></button><button class="button button-text" id="backButton">Go back</button></div>
+    </section>
+
+    <section class="screen story-screen" id="story" aria-labelledby="story-title" hidden>
+      <div class="story-top"><span class="eyebrow">Our little story</span><span class="chapter-count" id="chapterCount">Chapter 1 of 5</span></div>
+      <div class="story-card" id="storyCard" aria-live="polite">
+        <div class="story-icon" id="storyIcon" aria-hidden="true">✨</div>
+        <p class="chapter-label" id="chapterLabel">The beginning</p>
+        <h2 id="story-title">From strangers to something special</h2>
+        <p class="story-copy" id="storyCopy"></p>
+        <div class="memory-art" id="memoryArt" aria-hidden="true"></div>
+      </div>
+      <div class="story-controls"><div class="dots" id="dots" aria-label="Story progress"></div><button class="button button-primary" id="nextChapter">Next memory <span>→</span></button></div>
+      <button class="button button-text restart" id="restartStory">Start over</button>
+    </section>
+
+    <section class="screen final-screen" id="final" aria-labelledby="final-title" hidden>
+      <div class="final-bloom" aria-hidden="true">💐</div>
+      <p class="eyebrow">And one last thing…</p>
+      <h2 id="final-title">You make my days softer, brighter, and a whole lot happier.</h2>
+      <p class="final-copy">Thank you for being my favorite person, my best friend, and my love. I never knew our story would become this special, but I’m so grateful it did. I hope we keep choosing kindness, laughter, and each other, one day at a time.</p>
+      <p class="dua">Inshallah, someday we’ll make many more memories side by side. Until then, I’m keeping every little moment with you close to my heart. <span>♡</span></p>
+      <p class="signature">All my love, always<br><strong>Your favorite person 💌</strong></p>
+      <button class="button button-primary" id="loveButton">Send a little love back <span>♡</span></button>
+      <p class="love-response" id="loveResponse" aria-live="polite"></p>
+    </section>
+  </main>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <footer>made with a whole lot of love <span>♡</span></footer>
+</body>
+</html>
